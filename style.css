@@ -1,0 +1,301 @@
+/*  font-family: "Roboto Flex", serif;
+    font-family: "Roboto", serif;
+ */
+
+/* NORMALIZACION */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* Mantiene el ancho y alto a pesar del paddin y border */
+    font-family: "Roboto Flex", serif;
+    list-style: none; /* Quitar puntos en las listas */
+    text-decoration: none; /* Quitar subrayado de los enlaces */
+    color: coral;
+}
+
+body{
+    background-color: khaki;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+header{
+    position: fixed; /* Fijar en la parte superior */
+    top: 0px;
+    right: 0px;
+    z-index: 10; /* Header por encima */
+    height: 15%;
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    display: flex; /* Ordenar objetos en linea */
+    align-items: center ; /* Alinear verticalmente */
+    justify-content: space-between; /* Alinear horizontalmente */
+    padding: 15px 3%;
+    background: linear-gradient(135deg, #775951, #986f2d, #83510b, #682311);
+}
+
+header a img{
+    width: 10rem;
+    margin: 1rem 0rem 1rem 1rem;
+}
+
+.navlist{
+    display: flex;
+}
+
+.navlist a{
+    margin-left: 60px;
+    font-size: 18px;
+    font-weight: 600;
+    border-bottom: 2px solid transparent; /* Subrayado transparente */
+    transition: all .5 ease; /*  Para animar las caracteristicas de .navlist a */
+}
+
+.navlist a:hover{
+    border-bottom: 2px solid coral;
+}
+
+#menu-icon{
+    display: none; /* Para que se vea solo cuando se colapse la pagina */
+}
+
+#menu-icon{
+    font-size: 35px;
+    z-index: 100;
+    cursor: pointer;
+}
+
+#menu-toggle{
+    display: none;
+}
+
+.menu-icon-action{
+    display: block;
+}
+
+.hero{
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(recursos/imgs/playas-necochea.jpg);
+    background-attachment: fixed;
+    background-size:cover;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 2rem;
+}
+
+section{
+    padding: 0px 8%;
+}
+
+.hero-text h4{
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 20%;
+    margin-bottom: 9px;
+    color: rgb(255, 192, 169);
+}
+
+.hero-text h1{
+    font-family: "Roboto", serif;
+    font-size: 50px;
+    line-height: 1;
+    margin: 0 0 30px;
+    color: rgb(255, 192, 169);
+}
+
+.hero-text p{
+    font-size: 95%;
+    margin-bottom: 40px;
+    line-height: 1.5;
+    color: rgb(255, 192, 169);
+}
+
+.hero-text a{
+    display: inline-block;
+    margin-bottom: 12px;
+    background-color: rgb(94, 48, 3);
+    border: 1px solid transparent;
+    padding: 15px 30px;
+    line-height: 1.4;
+    font-weight: 500;
+    border-radius: 30px;
+    transition: all .4s ease;;
+}
+
+.hero-text a:hover{
+    background-color: transparent;
+    border: 1px solid coral;
+}
+
+.hero-img img{
+    width: 450px;
+    height: auto;
+    margin: 20% 0 0 20%;
+    border-radius: 30px;
+    border-style: solid;
+    border-width: 7px;
+    transition: all 1s linear;
+}
+
+/* .hero-img img:hover{
+    width: 500px;
+    opacity: 0.5;
+    height: auto;
+} */
+
+i{
+    margin-right: 6px;
+    vertical-align: middle;
+}
+
+.icons{
+    position: absolute;
+    top: 50vh;
+    padding: 0 3%;
+}
+
+.icons i{
+    display: block;
+    margin: 25px 0; 
+    font-size: 25px;
+    transition: all .2s ease;
+}
+
+.icons i:hover{
+    color: rgb(87, 26, 3);
+}
+
+.video{
+    color: rgb(255, 192, 169);
+}
+
+.video i{
+    color: rgb(255, 68, 0);
+}
+
+.ubicacion{
+    color: rgb(255, 192, 169);
+    margin-left: 20px;
+}
+
+.ubicacion i{
+    color: rgb(255, 68, 0);
+}
+
+
+/* MEDIA QUERIES */
+
+
+@media (max-width:1024px) {
+    section {
+        padding: 0 5%;
+    }
+
+    .hero-text {
+        padding: 10% 0;
+        text-align: center;
+    }
+
+    .hero-img img {
+        width: 400px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .navlist {
+        justify-content: center;
+    }
+
+    .navlist a {
+        margin-left: 20px;
+    }
+
+    .icons{
+        display: none;
+    }
+}
+
+/* Media Query para pantallas pequeñas (smartphones) */
+@media (max-width:768px) {
+    .menu-icon-action{
+        display: block;
+    }
+    
+    #menu-icon{
+        display: block;
+    }
+
+    .navlist {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 200px;
+        height: 100px;
+        background-color: #682311;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 20px;
+        transition: all 0.5s ease;
+    }
+
+    .navlist a{
+        display: block;
+        margin: 7px 0;
+    }
+
+    #menu-toggle:checked + label.menu-icon-action + ul{
+        right: 0;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .hero-text h4{
+        margin-top: 70px;
+    }
+
+    .hero-text h1 {
+        font-size: 36px;
+    }
+
+    .hero-text p {
+        font-size: 85%;
+    }
+
+    .hero-img img {
+        width: 90%;
+    }
+
+    .icons {
+        display: none; /* Ocultar iconos en pantallas pequeñas */
+    }
+}
+
+/* Media Query para pantallas muy pequeñas (320px - móviles antiguos) */
+@media (max-width:480px) {
+    .hero-text h1 {
+        font-size: 28px;
+    }
+
+    .hero-text p {
+        font-size: 75%;
+    }
+
+    .hero-text a {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    .hero-img img {
+        width: 200px;
+    }
+}

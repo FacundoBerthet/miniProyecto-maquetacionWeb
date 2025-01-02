@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!-- saved from url=(0023)http://127.0.0.1:5500/# -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Titulo de la Web -->    
+    <title>Proyecto - Necochea</title>
+    <!-- Import archivo CSS -->
+    
+
+    <!-- Import librerias de iconos -->
+    <!-- Boxicons -- https://boxicons.com/ -->
+    
+    <!-- Remix Icon -- https://remixicon.com/ -->
+     
+    <!-- Import fuentes -->
+     <!-- Google Fonts -- https://fonts.google.com/ -->
+    
+    
+    
+
+<link rel="stylesheet" href="./Proyecto - Necochea_files/style.css"><link rel="stylesheet" href="./Proyecto - Necochea_files/boxicons.min.css"><link href="./Proyecto - Necochea_files/remixicon.css" rel="stylesheet"><link rel="preconnect" href="https://fonts.googleapis.com/"><link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin=""><link href="./Proyecto - Necochea_files/css2" rel="stylesheet"></head>
+<body class="vsc-initialized">
+    
+    <!-- Cabecera, contiene logo y barra de navegacion -->
+    <header>
+        <!-- Logo -->
+        <a href="http://127.0.0.1:5500/#" class="logo"><img src="./Proyecto - Necochea_files/logo-necochea.jpg" alt="Logo de Necochea"></a>
+        <!-- Barra de Navegacion --> 
+        <!-- Boton clickeable sin usar JS -->
+        <input type="checkbox" name="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon-action">
+            <div class="bx bx-menu-alt-right" id="menu-icon"></div><!-- menu toggle -->
+        </label>
+        <ul class="navlist">
+            <li><a href="http://127.0.0.1:5500/#">Home</a></li>
+            <li><a href="http://127.0.0.1:5500/#">Informacion</a></li>
+            <li><a href="http://127.0.0.1:5500/#">Contacto</a></li>
+        </ul>
+    </header>
+
+    <!-- Hero section -->
+     <section class="hero">
+        <div class="hero-text">
+            <h4>Ubicada en la provincia de Buenos Aires:</h4>
+            <h1>Ciudad de Necochea</h1>
+            <p>Necochea, ubicada en la costa atlántica argentina, es conocida por   <br> sus extensas playas, el Parque Miguel Lillo, y su ambiente       <br>tranquilo ideal para disfrutar de la naturaleza y el descanso.
+            </p>
+            <a href="http://127.0.0.1:5500/#" class="video"><i class="ri-youtube-line"></i>Conoce postales de la ciudad</a>
+            <a href="http://127.0.0.1:5500/#" class="ubicacion"><i class="ri-compass-3-line"></i>Como llegar</a>
+        </div>
+        <div class="hero-img">
+            <img src="./Proyecto - Necochea_files/cartel-necochea.jpg" alt="playas de Necochea">
+        </div>
+     </section>
+    
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>

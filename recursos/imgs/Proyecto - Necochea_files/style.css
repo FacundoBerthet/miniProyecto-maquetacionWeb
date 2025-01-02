@@ -1,0 +1,132 @@
+/*  font-family: "Roboto Flex", serif;
+    font-family: "Roboto", serif;
+ */
+
+/* NORMALIZACION */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* Mantiene el ancho y alto a pesar del paddin y border */
+    font-family: "Roboto Flex", serif;
+    list-style: none; /* Quitar puntos en las listas */
+    text-decoration: none; /* Quitar subrayado de los enlaces */
+    color: coral;
+}
+
+body{
+    background-color: khaki;
+}
+
+header{
+    position: fixed; /* Fijar en la parte superior */
+    top: 0px;
+    right: 0px;
+    z-index: 10; /* Header por encima */
+    height: 15%;
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    display: flex; /* Ordenar objetos en linea */
+    align-items: center ; /* Alinear verticalmente */
+    justify-content: space-between; /* Alinear horizontalmente */
+    padding: 15px 3%;
+    background: linear-gradient(135deg, #775951, #986f2d, #83510b, #682311);
+}
+
+header a img{
+    width: 10rem;
+    margin: 1rem 0rem 1rem 1rem;
+}
+
+.navlist{
+    display: flex;
+}
+
+.navlist a{
+    margin-left: 60px;
+    font-size: 18px;
+    font-weight: 600;
+    border-bottom: 2px solid transparent; /* Subrayado transparente */
+    transition: all .5 ease; /*  Para animar las caracteristicas de .navlist a */
+}
+
+.navlist a:hover{
+    border-bottom: 2px solid coral;
+}
+
+#menu-icon{
+    display: none; /* Para que se vea solo cuando se colapse la pagina */
+}
+
+#menu-icon{
+    font-size: 35px;
+    z-index: 100;
+    cursor: pointer;
+}
+
+#menu-toggle{
+    display: none;
+}
+
+.menu-icon-action{
+    display: block;
+}
+
+.hero{
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(recursos/imgs/playas-necochea.jpg);
+    background-attachment: fixed;
+    background-size:cover;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 2rem;
+}
+
+section{
+    padding: 0px 8%;
+}
+
+.hero-text h4{
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 9px;
+    color: rgb(255, 192, 169);
+}
+
+.hero-text h1{
+    font-family: "Roboto", serif;
+    font-size: 50px;
+    line-height: 1;
+    margin: 0 0 30px;
+    color: rgb(255, 192, 169);
+}
+
+.hero-text p{
+    font-size: 95%;
+    margin-bottom: 40px;
+    line-height: 1.5;
+    color: rgb(255, 192, 169);
+}
+
+.video{
+    color: rgb(255, 192, 169);
+}
+
+.video i{
+    color: rgb(255, 68, 0);
+}
+
+.ubicacion{
+    color: rgb(255, 192, 169);
+}
+
+.ubicacion i{
+    color: rgb(255, 68, 0);
+}
+
+.hero-img img{
+    width: 500px;
+    margin: 10% ;
+}
