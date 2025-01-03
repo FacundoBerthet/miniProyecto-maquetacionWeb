@@ -290,12 +290,20 @@ i{
         font-size: 75%;
     }
 
+    header{
+        height: 17%;
+    }
+
     .hero-text a {
         font-size: 14px;
         padding: 10px 20px;
     }
 
     .hero-img img {
-        width: 200px;
+        width: 95%;
+    }
+
+    .logo img{
+        margin-top: 20px;
     }
 }
