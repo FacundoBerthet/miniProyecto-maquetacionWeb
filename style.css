@@ -64,6 +64,7 @@ header a img{
     font-size: 35px;
     z-index: 100;
     cursor: pointer;
+    display: none;
 }
 
 #menu-toggle{
@@ -249,7 +250,7 @@ i{
         margin: 7px 0;
     }
 
-    #menu-toggle:checked + label.menu-icon-action + ul{
+    .navlist.open{
         right: 0;
     }
 
