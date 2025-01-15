@@ -1,1 +1,1 @@
-Mini-Proyecto utilizando CSS y Html
+Mini-Proyecto utilizando HTML, CSS y un poco de JS
